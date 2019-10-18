@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Code for layout of Weight Conversion page design-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Paramedics.WeightConversion"
+             Title="Weight Conversion">
+    <ContentPage.Content>
+
+        <!--Definition for a grid layout, a layout which places the elements
+            in a table like format-->
+        <Grid Padding="10">
+
+            <!--Definitions for how many rows and columns the grid will have and
+                how much place each will take up-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <!--Definition for an entry element that allows user to enter a
+                weight value to be converted. The Grid Row/Column property sets
+                the location the element is located in the grid. It restricts
+                the user to a numeric keyboard using the Keyboard prperty. The
+                TextChanged proprety states what will when the user edits the text-->
+            <Entry x:Name="WeightLbs"
+                   Placeholder="0"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Numeric"
+                   TextChanged="PoundsChanged" />
+
+            <!--Definition for an label element that shows which unit of
+                measurement the weight should be entered in.-->
+            <Label Text="Lbs"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large" />
+
+            <Entry x:Name="WeightKgs"
+                   Placeholder="0"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Numeric"
+                   TextChanged="KilogramsChanged" />
+
+            <Label Text="Kgs"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large" />
+
+            <!--Definitions for buttons that convert the given weight and clear
+                all entered data-->
+            <Button Text="Convert"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Clicked="Convert_Clicked"
+                    FontSize="Large"
+                    BorderWidth="1" />
+
+            <Button Text="Clear"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Clicked="Clear_Clicked"
+                    FontSize="Large"
+                    BorderWidth="1" />
+        </Grid>
+
+
+    </ContentPage.Content>
+</ContentPage>

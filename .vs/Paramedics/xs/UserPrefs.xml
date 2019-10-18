@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{7F0675F9-388D-429E-B025-3BE3A212188F}|Default">
+  <MonoDevelop.Ide.ItemProperties.Paramedics.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.70310D61-5814-421B-BED9-9240A4ED0CB3" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Paramedics/DopamineDripCalculator.xaml.cs">
+    <Files>
+      <File FileName="Paramedics/DopamineDripCalculator.xaml" Line="59" Column="45" />
+      <File FileName="Paramedics/DopamineDripCalculator.xaml.cs" Line="183" Column="27" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Paramedics" expanded="True">
+            <Node name="Paramedics" expanded="True">
+              <Node name="App.xaml" expanded="True" />
+              <Node name="DopamineDripCalculator.xaml" expanded="True">
+                <Node name="DopamineDripCalculator.xaml.cs" selected="True" />
+              </Node>
+              <Node name="MainMenu.xaml" expanded="True" />
+              <Node name="ParklandForumula.xaml" expanded="True" />
+              <Node name="TemperatureConversion.xaml" expanded="True" />
+              <Node name="WeightConversion.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Paramedics.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.android_1" />
+</Properties>
