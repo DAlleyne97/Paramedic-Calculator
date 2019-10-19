@@ -1,9 +1,10 @@
-﻿<Properties StartupConfiguration="{7F0675F9-388D-429E-B025-3BE3A212188F}|Default">
+﻿<Properties StartupConfiguration="{8AFF2E4B-1548-40FB-9AB3-8FEEF0AF5FE9}|Default">
   <MonoDevelop.Ide.ItemProperties.Paramedics.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.70310D61-5814-421B-BED9-9240A4ED0CB3" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Paramedics/DopamineDripCalculator.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Paramedics/AssemblyInfo.cs">
     <Files>
-      <File FileName="Paramedics/DopamineDripCalculator.xaml" Line="59" Column="45" />
-      <File FileName="Paramedics/DopamineDripCalculator.xaml.cs" Line="183" Column="27" />
+      <File FileName="Paramedics/DopamineDripCalculator.xaml" Line="1" Column="1" />
+      <File FileName="Paramedics/DopamineDripCalculator.xaml.cs" Line="1" Column="1" />
+      <File FileName="Paramedics/AssemblyInfo.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,9 +12,8 @@
           <Node name="Paramedics" expanded="True">
             <Node name="Paramedics" expanded="True">
               <Node name="App.xaml" expanded="True" />
-              <Node name="DopamineDripCalculator.xaml" expanded="True">
-                <Node name="DopamineDripCalculator.xaml.cs" selected="True" />
-              </Node>
+              <Node name="AssemblyInfo.cs" selected="True" />
+              <Node name="DopamineDripCalculator.xaml" expanded="True" />
               <Node name="MainMenu.xaml" expanded="True" />
               <Node name="ParklandForumula.xaml" expanded="True" />
               <Node name="TemperatureConversion.xaml" expanded="True" />

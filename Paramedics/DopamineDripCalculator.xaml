@@ -47,26 +47,12 @@
                    HorizontalTextAlignment="Center" />
 
             <!--Label for which unit the weight should be entered in-->
-            <Label x:Name="WeightMeasurement"
-                   Text="Kg"
-                   Grid.Row="0"
-                   Grid.Column="2"
-                   HorizontalTextAlignment="Center"
-                   VerticalTextAlignment="Center"
-                   FontSize="Large" />
-
-            <!--Change to a button saying unit, allowing the user to change the unit of weight,
-                then alter the formula to-->
-            <!--Button to convert kg to lb-->
-            <Button x:Name="LbUnit"
+            <Button x:Name="WeightMeasurement"
+                    Text="KG"
                     Grid.Row="0"
-                    Grid.Column="3"
-                    Text="Lb"
-                    TextColor="Black"
+                    Grid.Column="2"
                     FontSize="Large"
-                    Clicked="Lb_Clicked"
-                    BackgroundColor="White"
-                    BorderWidth="1" />
+                    Clicked="ChangeMeasurement"/>
 
             <!--Label for dosage-->
             <Label Text="Dosage: "

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
-//round drip rate
 
 namespace Paramedics {
     public partial class DopamineDripCalculator : ContentPage {
@@ -38,27 +37,16 @@ namespace Paramedics {
             Saline.IsEnabled = false;
         }
 
-
-        //Need to update Method to allow user to press  button before entering weight
-        //Allowing them to enter either Pounds or Kilograms, then change the
-        //formula used
         /*Converts entered weight (given in Kg) to Lb and updates the weight measurement
           label*/
-        private void Lb_Clicked(object sender, System.EventArgs e) {
+        private void ChangeMeasurement(object sender, System.EventArgs e) {
 
-            if (Double.TryParse(PatientsWeight.Text, out enteredWeight)) {
-                if (LbUnit.BackgroundColor == Color.White) {
-                    ConvertWeightToLb();
-                    WeightMeasurement.Text = "Lb";
-                }
-                else if (LbUnit.BackgroundColor == Color.Blue) {
-                    ConvertWeightToKg();
-                    WeightMeasurement.Text = "Kg";
-                }
+            if (WeightMeasurement.Text == "KG") {
+                WeightMeasurement.Text = "LB";
+
             }
-            else {
-                DisplayAlert("No value entered", "Please enter the patient's weight", "OK");
-            }
+            else
+                WeightMeasurement.Text = "KG";
 
         }
 
@@ -86,6 +74,7 @@ namespace Paramedics {
         /*Clears and enables all fields*/
         private void Clear_Clicked(object sender, System.EventArgs e) {
             PatientsWeight.Text = null;
+            WeightMeasurement.Text = "KG";
             Dosage.Text = null;
             Dopamine.Text = null;
             Saline.Text = null;
@@ -93,7 +82,6 @@ namespace Paramedics {
             AdminPicker.SelectedItem = null;
             Ml_Min.Text = "0";
             DripRate.Text = "0";
-            LbUnit.BackgroundColor = Color.White;
             PatientsWeight.IsEnabled = true;
             Dosage.IsEnabled = true;
             Dopamine.IsEnabled = true;
@@ -107,20 +95,6 @@ namespace Paramedics {
         //****************************************************//
         //****************************************************//
         //****************************************************//
-
-        //Converts entered weight into Lbs
-       private void ConvertWeightToLb() {
-            LbUnit.BackgroundColor = Color.Blue;
-            enteredWeight *= 0.45359237;
-            PatientsWeight.Text = Math.Round(enteredWeight, 2).ToString();
-        }
-
-        //Converts entered weight into Kgs
-        private void ConvertWeightToKg() {
-            LbUnit.BackgroundColor = Color.White;
-            enteredWeight /= 0.45359237;
-            PatientsWeight.Text = Math.Round(enteredWeight, 2).ToString();
-        }
 
         //Disables the fields
         private void DisableFields() {
@@ -142,8 +116,13 @@ namespace Paramedics {
         //Calculate Ml_Min (solution 1)
         private void Ml_MinCalculation() {
 
+            /*If the user enters the patients weight in LBs it converts it to
+              KGs for further calculations*/
             if (Double.TryParse(PatientsWeight.Text, out enteredWeight)) {
-
+                if (WeightMeasurement.Text == "LB") {
+                    enteredWeight *= 0.45359237;
+                    enteredWeight = Math.Round(enteredWeight, 2);
+                }
             }
             else {
                 DisplayAlert("Weight", "Please enter the patient's weight", "OK");
@@ -187,6 +166,7 @@ namespace Paramedics {
             }
 
             enteredDripRate = enteredMlMin * (enteredAdministration / enteredConcentration);
+            enteredDripRate = Math.Round(enteredDripRate);
 
             DripRate.Text = enteredDripRate.ToString();
             DisableFields();
