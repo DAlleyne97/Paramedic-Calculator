@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Paramedics.Calculations.PropofolFormula"
+             Title="Propofol Rate">
+    <ContentPage.Content>
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130" />
+                <ColumnDefinition Width="75" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <!--Patients weight definition-->
+            <Label Text="Patient's Weight:"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+
+            <Entry x:Name="weightEntry"
+                   Placeholder="0"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Numeric"/>
+
+            <Button x:Name="weightMeasurement"
+                    Text="KG"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    HorizontalOptions="Start"
+                    FontSize="Large"
+                    Clicked="UnitClicked"
+                    BorderWidth="1"
+                    Padding="5"/>
+
+            <!--Propofol available definition-->
+            <Label Text="Propofol ordered: "
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+
+            <Entry x:Name="propofolEntry"
+                   Placeholder="0"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Numeric"/>
+
+            <Label Text="Mg/ML"
+                   Grid.Row="1"
+                   Grid.Column="2"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+
+            <!--Propofol available definition-->
+            <Label Text="Propofol available: "
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+
+            <Entry x:Name="propofolAvailableEntry"
+                   Placeholder="0"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Numeric"/>
+
+            <Label Text="Mg/ML"
+                   Grid.Row="2"
+                   Grid.Column="2"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+
+            <!--Clear and Calculate-->
+            <Button Text="Calculate"
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="Large"
+                    Clicked="calculateClicked"
+                    BorderWidth="1"/>
+
+            <Button Text="Clear"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="Large"
+                    Clicked="clearClicked"
+                    BorderWidth="1"
+                    Padding="5"/>
+
+            <!--Sedation Definition-->
+            <Label Text="Sedation: "
+                   Grid.Row="4"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+
+            <Entry x:Name="sedationEntry1"
+                   Placeholder="0"
+                   Grid.Row="4"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Numeric"
+                   IsEnabled="False"/>
+
+            <Label Text="Mg/ML"
+                   Grid.Row="4"
+                   Grid.Column="2"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+
+            <!--Induction Definiton-->
+             <Label Text="Induction: "
+                   Grid.Row="5"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+
+            <Entry x:Name="inductionEntry"
+                   Placeholder="0"
+                   Grid.Row="5"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Numeric"
+                   IsEnabled="False"/>
+
+            <Label Text="ML"
+                   Grid.Row="5"
+                   Grid.Column="2"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+
+            <!--Maintenance Definition-->
+             <Label Text="Maintenace: "
+                   Grid.Row="6"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+
+            <Entry x:Name="maintenanceEntry"
+                   Placeholder="0"
+                   Grid.Row="6"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Numeric"
+                   IsEnabled="False"/>
+
+            <Label Text="Mg/ML"
+                   Grid.Row="6"
+                   Grid.Column="2"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

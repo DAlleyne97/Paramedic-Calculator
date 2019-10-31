@@ -1,23 +1,26 @@
-﻿<Properties StartupConfiguration="{8AFF2E4B-1548-40FB-9AB3-8FEEF0AF5FE9}|Default">
+﻿<Properties StartupConfiguration="{7F0675F9-388D-429E-B025-3BE3A212188F}|Default">
   <MonoDevelop.Ide.ItemProperties.Paramedics.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.70310D61-5814-421B-BED9-9240A4ED0CB3" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Paramedics/AssemblyInfo.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Paramedics/App.xaml.cs">
     <Files>
-      <File FileName="Paramedics/DopamineDripCalculator.xaml" Line="1" Column="1" />
-      <File FileName="Paramedics/DopamineDripCalculator.xaml.cs" Line="1" Column="1" />
-      <File FileName="Paramedics/AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="Paramedics/Menus/MainMenu.xaml.cs" Line="14" Column="58" />
+      <File FileName="Paramedics/Menus/SlideMainMenu.xaml.cs" Line="14" Column="60" />
+      <File FileName="Paramedics/App.xaml.cs" Line="21" Column="59" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Paramedics" expanded="True">
             <Node name="Paramedics" expanded="True">
-              <Node name="App.xaml" expanded="True" />
-              <Node name="AssemblyInfo.cs" selected="True" />
-              <Node name="DopamineDripCalculator.xaml" expanded="True" />
-              <Node name="MainMenu.xaml" expanded="True" />
-              <Node name="ParklandForumula.xaml" expanded="True" />
-              <Node name="TemperatureConversion.xaml" expanded="True" />
-              <Node name="WeightConversion.xaml" expanded="True" />
+              <Node name="Calculations" expanded="True">
+                <Node name="CalculationLog.xaml" expanded="True" />
+              </Node>
+              <Node name="Menus" expanded="True">
+                <Node name="MainMenu.xaml" expanded="True" />
+                <Node name="SlideMainMenu.xaml" expanded="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True">
+                <Node name="App.xaml.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

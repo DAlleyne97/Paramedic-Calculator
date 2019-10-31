@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Paramedics.Menus.MainMenu"
+             Title="Paramedic Calculations">
+    <ContentPage.Content>
+        <ScrollView>
+            <!--Definition for a stack layout, a layout which stacks the elements
+            ontop of one another.-->
+            <StackLayout Margin="20,35,20,25">
+
+                <!--Definition for buttons when clicked they change the page to
+                different claculations-->
+                <Button Text="Dopamine Drip Calculator"
+                        Clicked="Dopamine_Clicked"
+                        TextColor="Black"
+                        FontSize="Large"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"
+                        BorderWidth="1" />
+
+                <Button Text="Parkland Formula"
+                        Clicked="Parkland_Clicked"
+                        TextColor="Black"
+                        FontSize="Large"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"
+                        BorderWidth="1" />
+
+                <Button Text="Propofol Rate Calculator"
+                        Clicked="Propofol_Clicked"
+                        TextColor="Black"
+                        FontSize="Large"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"
+                        BorderWidth="1" />
+
+                <Button Text="Temperature Conversion"
+                        Clicked="Temperature_Clicked"
+                        TextColor="Black"
+                        FontSize="Large"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"
+                        BorderWidth="1" />
+
+                <Button Text="Weight Conversion"
+                        Clicked="Weight_Clicked"
+                        TextColor="Black"
+                        FontSize="Large"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"
+                        BorderWidth="1" />
+                </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

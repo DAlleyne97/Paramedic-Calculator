@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Paramedics.Calculations.ParklandForumula"
+             Title="Parkland Formula">
+    <ContentPage.Content>
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <!--Burn serface area definition-->
+            <Label Text="Burn Surface Area:"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+
+            <Entry x:Name="bsaEntry"
+                   Placeholder="0"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Numeric"/>
+
+            <Label Text="%"
+                   Grid.Row="0"
+                   Grid.Column="2"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+
+            <!--Patients weight definition-->
+            <Label Text="Patient's Weight:"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+
+            <Entry x:Name="weightEntry"
+                   Placeholder="0"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Numeric"/>
+
+            <Button x:Name="WeightMeasurement"
+                    Text="KG"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    HorizontalOptions="Start"
+                    FontSize="Large"
+                    Clicked="UnitClicked"
+                    BorderWidth="1"
+                    Padding="5"/>
+
+            <!--Clear and Calculate-->
+            <Button Text="Calculate"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="Large"
+                    Clicked="calculateClicked"
+                    BorderWidth="1"/>
+
+            <Button Text="Clear"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="Large"
+                    Clicked="clearClicked"
+                    BorderWidth="1"
+                    Padding="5"/>
+
+            <!-- Solution definition-->
+            <Label Text="Total Administration: "
+                   Grid.Row="3"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+
+            <Entry x:Name="totalAdministration"
+                   Placeholder="0"
+                   Grid.Row="3"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   IsEnabled="False"/>
+
+            <Label Text="Ml"
+                   Grid.Row="3"
+                   Grid.Column="2"
+                   HorizontalTextAlignment="Start"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+
+            <Label Text="First 8-hours:"
+                   Grid.Row="4"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+
+            <Entry x:Name="firstAdministration"
+                   Placeholder="0"
+                   Grid.Row="4"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   IsEnabled="False"/>
+
+            <Label Text="Ml"
+                   Grid.Row="4"
+                   Grid.Column="2"
+                   HorizontalTextAlignment="Start"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+
+            <Label Text="Next 16-hours:"
+                   Grid.Row="5"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+
+            <Entry x:Name="secondAdministration"
+                   Placeholder="0"
+                   Grid.Row="5"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   IsEnabled="False"/>
+
+            <Label Text="Ml"
+                   Grid.Row="5"
+                   Grid.Column="2"
+                   HorizontalTextAlignment="Start"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

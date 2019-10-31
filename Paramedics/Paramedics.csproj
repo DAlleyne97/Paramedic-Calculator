@@ -12,15 +12,52 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="MainPage.xaml" />
-    <EmbeddedResource Remove="MyPage.xaml" />
+    <EmbeddedResource Remove="MainMenu2.xaml" />
+    <EmbeddedResource Remove="WeightConversion.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="MainPage.xaml.cs" />
     <Compile Remove="MyPage.cs" />
-    <Compile Remove="MyPage.xaml.cs" />
     <Compile Remove="DopamineDripCalculator.cs" />
+    <Compile Remove="MainMenu2.xaml.cs" />
+    <Compile Remove="WeightConversion.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Menus\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Menus\SlideMainMenu.xaml.cs">
+      <DependentUpon>SlideMainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Calculations\WeightConversion.xaml.cs">
+      <DependentUpon>WeightConversion.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Calculations\TemperatureConversion.xaml.cs">
+      <DependentUpon>TemperatureConversion.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Calculations\DopamineDripCalculator.xaml.cs">
+      <DependentUpon>DopamineDripCalculator.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Calculations\ParklandFormula.xaml.cs">
+      <DependentUpon>ParklandFormula.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Calculations\PropofolFormula.xaml.cs">
+      <DependentUpon>PropofolFormula.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Calculations\CalculationLog.xaml.cs">
+      <DependentUpon>CalculationLog.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="Menus\" />
+    <Folder Include="Calculations\" />
   </ItemGroup>
 </Project>

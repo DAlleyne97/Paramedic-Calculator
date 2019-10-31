@@ -69,7 +69,6 @@
     <CodesignResourceRules></CodesignResourceRules>
     <OptimizePNGs></OptimizePNGs>
     <OnDemandResourcesInitialInstallTags></OnDemandResourcesInitialInstallTags>
-    <PublicSign>false</PublicSign>
     <OnDemandResourcesInitialInstallTags></OnDemandResourcesInitialInstallTags>
   </PropertyGroup>
   <ItemGroup>
@@ -135,6 +134,9 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.6.292</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -142,5 +144,9 @@
       <Project>{76F50D7E-989B-4E1F-B6D5-15919D8E4990}</Project>
       <Name>Paramedics</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hamburger.png" />
+    <BundleResource Include="Resources\homepage.png" />
   </ItemGroup>
 </Project>

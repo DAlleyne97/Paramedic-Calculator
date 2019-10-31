@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="Paramedics.Menus.SlideMainMenu"
+                  Title="Paramedic Calculations">
+
+    <MasterDetailPage.Master>
+        <ContentPage BackgroundColor="DarkGray"
+                     Title="Master"
+                     IconImageSource="hamburger.png">
+            <ContentPage.Content>
+                <ScrollView>
+                    <StackLayout Margin="20,35,20,25">
+                        
+
+                        <Button Text="Dopamine Drip Calculator"
+                                Clicked="Dopamine_Clicked"
+                                TextColor="Black"
+                                FontSize="Large"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="Start"
+                                BorderWidth="1" />
+
+                        <Button Text="Parkland Formula"
+                                Clicked="Parkland_Clicked"
+                                TextColor="Black"
+                                FontSize="Large"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="Start"
+                                BorderWidth="1" />
+
+                        <Button Text="Propofol Rate Calculator"
+                                Clicked="Propofol_Clicked"
+                                TextColor="Black"
+                                FontSize="Large"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="Start"
+                                BorderWidth="1" />
+
+                        <Button Text="Temperature Conversion"
+                                Clicked="Temperature_Clicked"
+                                TextColor="Black"
+                                FontSize="Large"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="Start"
+                                BorderWidth="1" />
+
+                        <Button Text="Weight Conversion"
+                                Clicked="Weight_Clicked"
+                                TextColor="Black"
+                                FontSize="Large"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="Start"
+                                BorderWidth="1" />
+
+                    </StackLayout>
+                </ScrollView>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage Title="Paramedic Calculations">
+            <ContentPage.Content>
+                <StackLayout Margin="20,35,20,25">
+                    <Image Source="homepage.png" />
+                    <Label Text="This app does various paramedic calculations"
+                           VerticalOptions="CenterAndExpand"
+                           BackgroundColor="IndianRed"/>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
