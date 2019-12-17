@@ -18,6 +18,8 @@
     <EmbeddedResource Remove="MainPage.xaml" />
     <EmbeddedResource Remove="MainMenu2.xaml" />
     <EmbeddedResource Remove="WeightConversion.xaml" />
+    <EmbeddedResource Remove="Calculations\TestingStringcomp.xaml" />
+    <EmbeddedResource Remove="Calculations\BurnSurfaceAreaCalculation.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="MainPage.xaml.cs" />
@@ -25,6 +27,7 @@
     <Compile Remove="DopamineDripCalculator.cs" />
     <Compile Remove="MainMenu2.xaml.cs" />
     <Compile Remove="WeightConversion.xaml.cs" />
+    <Compile Remove="Calculations\BurnSurfaceAreaCalculation.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Menus\MainMenu.xaml.cs">
@@ -51,13 +54,26 @@
     <Compile Update="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Calculations\CalculationLog.xaml.cs">
-      <DependentUpon>CalculationLog.xaml</DependentUpon>
+    <Compile Update="Calculations\Logs\TemperatureLog.xaml.cs">
+      <DependentUpon>TemperatureLog.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Calculations\CalculationTab.xaml.cs">
+      <DependentUpon>CalculationTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Calculations\Logs\DopamineLog.xaml.cs">
+      <DependentUpon>DopamineLog.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Calculations\Logs\ParklandLog.xaml.cs">
+      <DependentUpon>ParklandLog.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Menus\TabMenu.xaml.cs">
+      <DependentUpon>TabMenu.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Classes\" />
     <Folder Include="Menus\" />
     <Folder Include="Calculations\" />
+    <Folder Include="Calculations\Logs\" />
   </ItemGroup>
 </Project>

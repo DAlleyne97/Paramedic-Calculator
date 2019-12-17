@@ -12,13 +12,13 @@ namespace Paramedics {
         public App() {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new DopamineDripCalculator());
+            MainPage = new NavigationPage(new MyPage());
         }
 
         public App(string filePath) {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new DopamineDripCalculator());
+            MainPage = new NavigationPage(new MyPage());
 
             FilePath = filePath;
         }

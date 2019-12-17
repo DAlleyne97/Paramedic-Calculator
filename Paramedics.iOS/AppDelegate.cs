@@ -22,6 +22,7 @@ namespace Paramedics.iOS {
         public override bool FinishedLaunching(UIApplication app, NSDictionary options) {
             global::Xamarin.Forms.Forms.Init();
 
+            //statements needed to make SQL table in iOS
             string fileName = "patients_db.db3";
             string folderPath = Path.Combine(Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "..", "Library");
             string completePath = Path.Combine(folderPath, fileName);

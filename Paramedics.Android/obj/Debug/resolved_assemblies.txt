@@ -4,6 +4,12 @@
 /Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/Mono.Android.dll
 /Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/mscorlib.dll
 /Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/Paramedics.dll
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/SQLite-net.dll
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/SQLitePCLRaw.batteries_green.dll
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/SQLitePCLRaw.batteries_v2.dll
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/SQLitePCLRaw.core.dll
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/SQLitePCLRaw.lib.e_sqlite3.dll
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/SQLitePCLRaw.provider.e_sqlite3.dll
 /Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/System.Core.dll
 /Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/System.dll
 /Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/System.Numerics.dll
@@ -66,4 +72,14 @@
 /Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/System.IO.Compression.FileSystem.dll
 /Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/System.ComponentModel.Composition.dll
 /Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/System.Web.Services.dll
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/System.Collections.dll
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/System.Runtime.Extensions.dll
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/System.Linq.Expressions.dll
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/System.Reflection.dll
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/System.Diagnostics.Debug.dll
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/System.Threading.Tasks.dll
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/System.Linq.dll
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/System.Threading.dll
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/System.Reflection.Extensions.dll
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/System.Globalization.dll
 /Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics.Android/obj/Debug/android/assets/Mono.Security.dll

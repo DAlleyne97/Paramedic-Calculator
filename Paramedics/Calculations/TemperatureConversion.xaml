@@ -10,9 +10,11 @@
             in a table like format-->
         <Grid Padding="10">
 
-             <!--Definitions for how many rows and columns the grid will have and
+            <!--Definitions for how many rows and columns the grid will have and
                 how much place each will take up-->
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -20,8 +22,31 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
+
+            <!--A button that displays instructions for weight converison-->
+            <Button Text="Instructions"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    FontSize="Large"
+                    BorderWidth="1"
+                    Clicked="InstructionsClicked"/>
+
+            <!--Entries that allow user to patients name-->
+            <Entry x:Name="FirstNameEntry"
+                   Placeholder="First name"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Plain" />
+
+            <Entry x:Name="LastNameEntry"
+                   Placeholder="Last name"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Plain" />
 
             <!--Definition for an entry element that allows user to enter a
                 temperature value to be converted. The Grid Row/Column property sets
@@ -30,7 +55,8 @@
                 TextChanged proprety states what will when the user edits the text-->
             <Entry x:Name="FTemp"
                    Placeholder="0"
-                   Grid.Row="0"
+                   Grid.Row="2"
+                   Grid.Column="0"
                    HorizontalTextAlignment="Center"
                    Keyboard="Numeric"
                    TextChanged="FahrenheitChanged"/>
@@ -38,7 +64,7 @@
             <!--Definition for an label element that shows which unit of
                 measurement the temperature should be entered in.-->
             <Label Text="&#186;F"
-                   Grid.Row="0"
+                   Grid.Row="2"
                    Grid.Column="1"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
@@ -46,13 +72,14 @@
 
             <Entry x:Name="CTemp"
                    Placeholder="0"
-                   Grid.Row="1"
+                   Grid.Row="3"
+                   Grid.Column="0"
                    HorizontalTextAlignment="Center"
                    Keyboard="Numeric"
                    TextChanged="CelsiusChanged"/>
 
             <Label Text="&#186;C"
-                   Grid.Row="1"
+                   Grid.Row="3"
                    Grid.Column="1"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
@@ -61,21 +88,20 @@
             <!--Definitions for buttons that convert the given weight and clear
                 all entered data-->
             <Button Text="Convert"
-                    Grid.Row="2"
+                    Grid.Row="4"
+                    Grid.Column="0"
                     Clicked="Convert_Clicked"
                     FontSize="Large"
                     BorderWidth="1"
                     Padding="2"/>
 
             <Button Text="Clear"
-                    Grid.Row="2"
+                    Grid.Row="4"
                     Grid.Column="1"
                     Clicked="Clear_Clicked"
                     FontSize="Large"
                     BorderWidth="1"
                     Padding="2"/>
-
         </Grid>
-
     </ContentPage.Content>
 </ContentPage>

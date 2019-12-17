@@ -1,9 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- A Slide Menu in which the main page shows an imagine and some flavor text
+     and by swiping to the right buttons are revealed that transform the main page
+     into a seleceted calculation. Users can swipe right or press the icon in the
+     top left to access other calculations-->
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                   x:Class="Paramedics.Menus.SlideMainMenu"
                   Title="Paramedic Calculations">
 
+    <!--Definition for the page that is accessed by sliding to the right. Has a
+        list of buttons which load different calculations-->
     <MasterDetailPage.Master>
         <ContentPage BackgroundColor="DarkGray"
                      Title="Master"
@@ -11,9 +17,16 @@
             <ContentPage.Content>
                 <ScrollView>
                     <StackLayout Margin="20,35,20,25">
-                        
+
+                        <SearchBar x:Name="Search"
+                                   Placeholder="Search"
+                                   HorizontalTextAlignment="Center"
+                                   Keyboard="Plain"
+                                   SearchButtonPressed="Searching"
+                                   TextChanged="text_Changed"/>        
 
                         <Button Text="Dopamine Drip Calculator"
+                                x:Name="Dopamine"
                                 Clicked="Dopamine_Clicked"
                                 TextColor="Black"
                                 FontSize="Large"
@@ -22,6 +35,7 @@
                                 BorderWidth="1" />
 
                         <Button Text="Parkland Formula"
+                                x:Name="Parkland"
                                 Clicked="Parkland_Clicked"
                                 TextColor="Black"
                                 FontSize="Large"
@@ -30,6 +44,7 @@
                                 BorderWidth="1" />
 
                         <Button Text="Propofol Rate Calculator"
+                                x:Name="Propofol"
                                 Clicked="Propofol_Clicked"
                                 TextColor="Black"
                                 FontSize="Large"
@@ -38,6 +53,7 @@
                                 BorderWidth="1" />
 
                         <Button Text="Temperature Conversion"
+                                x:Name="Temperature"
                                 Clicked="Temperature_Clicked"
                                 TextColor="Black"
                                 FontSize="Large"
@@ -46,6 +62,7 @@
                                 BorderWidth="1" />
 
                         <Button Text="Weight Conversion"
+                                x:Name="Weight"
                                 Clicked="Weight_Clicked"
                                 TextColor="Black"
                                 FontSize="Large"
@@ -53,20 +70,31 @@
                                 VerticalOptions="Start"
                                 BorderWidth="1" />
 
+                        <Button Text="Calculation Log"
+                                 Clicked="CalculationLog_Clicked"
+                                 TextColor="Black"
+                                 FontSize="Large"
+                                 HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="Start"
+                                 BorderWidth="1" />
+
                     </StackLayout>
                 </ScrollView>
             </ContentPage.Content>
         </ContentPage>
     </MasterDetailPage.Master>
 
+    <!--Definition for the main page that shows the start screen and selected
+        calculations-->
     <MasterDetailPage.Detail>
         <ContentPage Title="Paramedic Calculations">
             <ContentPage.Content>
                 <StackLayout Margin="20,35,20,25">
                     <Image Source="homepage.png" />
-                    <Label Text="This app does various paramedic calculations"
-                           VerticalOptions="CenterAndExpand"
-                           BackgroundColor="IndianRed"/>
+                    <Label Text="This app does various medical calculations"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center"/>
+                           
                 </StackLayout>
             </ContentPage.Content>
         </ContentPage>

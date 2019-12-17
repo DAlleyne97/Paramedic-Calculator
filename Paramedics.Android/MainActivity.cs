@@ -20,6 +20,7 @@ namespace Paramedics.Droid {
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
+            //statements needed to make SQL table in andriod
             string fileName = "patients_db.db3";
             string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string completePath = Path.Combine(folderPath, fileName);

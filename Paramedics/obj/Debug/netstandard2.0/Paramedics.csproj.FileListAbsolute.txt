@@ -30,3 +30,11 @@
 /Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics/obj/Debug/netstandard2.0/Calculations/DopamineDripCalculator.xaml.g.cs
 /Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics/obj/Debug/netstandard2.0/Calculations/ParklandFormula.xaml.g.cs
 /Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics/obj/Debug/netstandard2.0/Calculations/PropofolFormula.xaml.g.cs
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics/obj/Debug/netstandard2.0/Calculations/Logs/TemperatureLog.xaml.g.cs
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics/obj/Debug/netstandard2.0/Calculations/Logs/WeightLog.xaml.g.cs
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics/obj/Debug/netstandard2.0/Calculations/CalculationTab.xaml.g.cs
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics/obj/Debug/netstandard2.0/Calculations/Logs/DopamineLog.xaml.g.cs
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics/obj/Debug/netstandard2.0/Calculations/Logs/ParklandLog.xaml.g.cs
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics/obj/Debug/netstandard2.0/Menus/TabMenu.xaml.g.cs
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics/obj/Debug/netstandard2.0/Calculations/MyPage.xaml.g.cs
+/Users/devon/Desktop/Cisc_4900/Paramedics/Paramedics/obj/Debug/netstandard2.0/Calculations/Logs/PatientDetailPage.xaml.g.cs

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Code for sql element deletion page-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Paramedics.Calculations.Logs.PatientDetailPage">
+    <StackLayout>
+        <Label x:Name="NameLabel"
+               Text="placeholder"/>
+        <Button Text="Delete"
+                x:Name="DeleteButton"
+                Clicked="Delete_Clicked"/>
+    </StackLayout>
+    
+</ContentPage>

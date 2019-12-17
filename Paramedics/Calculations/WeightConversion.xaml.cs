@@ -10,10 +10,20 @@ namespace Paramedics.Calculations {
 
         double WeightInPounds;
         double WeightInKilograms;
+        Patient patient = new Patient();
+
 
         public WeightConversion() {
             InitializeComponent();
 
+        }
+
+        /*Displays an alert that lists the instructions on how to use weight
+         * conversion*/
+        private void InstructionsClicked(object sender, System.EventArgs e) {
+            DisplayAlert("Instructions", "1.Enter the patient's first and last name.\n\n" +
+                                         "2.Enter the patient's weight in either pounds or kilograms then press convert.\n\n" +
+                                         "3. Press clear before converting another patient's weight.", "Ok");
         }
 
         /*Method that disables the Kilogram entry input element when text is changed
@@ -31,6 +41,12 @@ namespace Paramedics.Calculations {
         /*Method that Converts the given weight into pounds pr kilograms*/
         void Convert_Clicked(object sender, System.EventArgs e) {
 
+            if (FirstNameEntry.Text == null || LastNameEntry.Text ==null) {
+                DisplayAlert("No name entered", "Please enter the patient's name", "OK");
+            }
+            else
+                patient.SetName(FirstNameEntry.Text, LastNameEntry.Text);
+
             /*Attempts to parse value stored in Pound entry into a double and
               store it into a variable, if successful it converts it into kilograms
               and displays it in Kilogram entry. If it fails it attempts this
@@ -38,58 +54,49 @@ namespace Paramedics.Calculations {
               incorrect value was entered and clears all entered data*/
             if (Double.TryParse(WeightLbs.Text, out WeightInPounds)) {
 
-                WeightInKilograms = Math.Round(WeightInPounds * 0.45359237, 3);
-                WeightKgs.Text = WeightInKilograms.ToString();
 
-                //creates an object with the converted values
-                Patient patient = new Patient() {
+                patient.SetPounds(WeightInPounds);
+                patient.ConvertToKilograms(WeightInPounds);
 
-                    FirstName = FirstName.Text,
-                    LastName = LastName.Text,
-                    WeightLbs = WeightInPounds,
-                    WeightKgs = WeightInKilograms
-
-                };
-
-                //to insert object into an SQLite table
-                using(SQLiteConnection conn = new SQLiteConnection(App.FilePath)) {
-
-                    conn.CreateTable<Patient>();
-                    int rowsAdded = conn.Insert(patient);
-                }
-
-            }
-            else if (Double.TryParse(WeightKgs.Text, out WeightInKilograms)) {
-
-                WeightInPounds = Math.Round(WeightInKilograms / 0.45359237, 3);
-                WeightLbs.Text = WeightInPounds.ToString();
-
-                Patient patient = new Patient() {
-                    FirstName = FirstName.Text,
-                    LastName = LastName.Text,
-                    WeightLbs = WeightInPounds,
-                    WeightKgs = WeightInKilograms
-
-                };
-
+                /* Inserts object into an SQLite table when weight is converted
+                   Pounds to Kilograms*/
                 using (SQLiteConnection conn = new SQLiteConnection(App.FilePath)) {
 
                     conn.CreateTable<Patient>();
                     int rowsAdded = conn.Insert(patient);
                 }
 
+                WeightKgs.Text = patient.Kilograms.ToString();
+
+            }
+            else if (Double.TryParse(WeightKgs.Text, out WeightInKilograms)) {
+
+                
+                patient.SetKilograms(WeightInKilograms);
+                patient.ConvertToPounds(WeightInKilograms);
+
+                /* Inserts object into an SQLite table when weight is converted
+                   Kilograms to Pounds*/
+                using (SQLiteConnection conn = new SQLiteConnection(App.FilePath)) {
+
+                    conn.CreateTable<Patient>();
+                    int rowsAdded = conn.Insert(patient);
+                }
+
+                WeightLbs.Text = patient.Pounds.ToString();
+
             }
             else {
                 DisplayAlert("No value entered", "Please enter the patient's weight", "OK");
                 Clear_Clicked(sender, e);
             }
-
-
         }
 
         /*Method that clears all data entered and enables the entries for user
           to input values*/
         void Clear_Clicked(object sender, System.EventArgs e) {
+            FirstNameEntry.Text = null;
+            LastNameEntry.Text = null;
             WeightLbs.Text = null;
             WeightKgs.Text = null;
             WeightKgs.IsEnabled = true;

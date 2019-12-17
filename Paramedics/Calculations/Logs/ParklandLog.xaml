@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Page to show data from sql table of a patient and the required fluid to be given
+    by the parkland formula-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Paramedics.Calculations.Logs.ParklandLog"
+             Title="Parkland">
+    <ContentPage.Content >
+        <ListView x:Name="patientsListView"
+                  HasUnevenRows="True"
+                  ItemSelected="Item_Selected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical"
+                                     Spacing="4"
+                                     Padding="5" >
+                            <Label Text="{Binding Name}"
+                                   TextColor="Blue" />
+
+                            <Label Text="ID"
+                                   Margin="10,0,0,0"
+                                   TextColor="DarkRed"/>
+
+                            <Label Text="{Binding Id}"
+                                   Margin="10,0,0,0"/>
+
+                            <Label Text="Burn Surface Area Percentage"
+                                   Margin="10,0,0,0"
+                                   TextColor="DarkRed"/>
+
+                            <Label Text="{Binding BurnSurfaceArea}"
+                                   Margin="10,0,0,0"/>
+
+                            <Label Text="Pounds"
+                                   Margin="10,0,0,0"
+                                   TextColor="DarkRed"/>
+
+                            <Label Text="{Binding Pounds}"
+                                   Margin="10,0,0,0"/>
+
+                            <Label Text="Kilograms"
+                                   Margin="10,0,0,0"
+                                   TextColor="DarkRed"/>
+
+                            <Label Text="{Binding Kilograms} "
+                                   Margin="10,0,0,0"/>
+
+                            <Label Text="Total Administration"
+                                   Margin="10,0,0,0"
+                                   TextColor="DarkRed"/>
+
+                            <Label Text="{Binding TotalAdministration}"
+                                   Margin="10,0,0,0"/>
+
+                            <Label Text="First Administration"
+                                   Margin="10,0,0,0"
+                                   TextColor="DarkRed"/>
+
+                            <Label Text="{Binding Administration}"
+                                   Margin="10,0,0,0"/>
+
+                            <Label Text="Second Administration"
+                                   Margin="10,0,0,0"
+                                   TextColor="DarkRed"/>
+
+                            <Label Text="{Binding Administration}"
+                                   Margin="10,0,0,0"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--This page allows me to select menu syles I am developing-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Paramedics.Calculations.MyPage">
+    <ContentPage.Content>
+        <StackLayout Margin="20,35,20,25">
+
+            <Button Text="Scroll Main Menu"
+                    Clicked="ScrollMainMenu"
+                    TextColor="Black"
+                    FontSize="Large"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    BorderWidth="1"/>
+
+            <Button Text="Slide Main Menu"
+                    Clicked="SlideMainMenu"
+                    TextColor="Black"
+                    FontSize="Large"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    BorderWidth="1"/>
+
+            <Button Text="Folder Tab Main Menu"
+                    Clicked="FolderTabMainMenu"
+                    TextColor="Black"
+                    FontSize="Large"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    BorderWidth="1"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,4 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- A Menu in which a calculation can be accessed by pressing a button. The button
+    leads to a new page where calculations can be done. Users must go back to the
+    main page to access another calculation-->
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Paramedics.Menus.MainMenu"
@@ -9,9 +12,19 @@
             ontop of one another.-->
             <StackLayout Margin="20,35,20,25">
 
+                <!--Definition for a search bar that allows users to search for
+                    procedures, more useful when other calculation are added in-->
+                <SearchBar x:Name="Search"
+                           Placeholder="Search"
+                           HorizontalTextAlignment="Center"
+                           Keyboard="Plain"
+                           SearchButtonPressed="Searching"
+                           TextChanged="text_Changed"/>
+
                 <!--Definition for buttons when clicked they change the page to
-                different claculations-->
+                different claculations or log-->
                 <Button Text="Dopamine Drip Calculator"
+                        x:Name="Dopamine"
                         Clicked="Dopamine_Clicked"
                         TextColor="Black"
                         FontSize="Large"
@@ -20,6 +33,7 @@
                         BorderWidth="1" />
 
                 <Button Text="Parkland Formula"
+                        x:Name="Parkland"
                         Clicked="Parkland_Clicked"
                         TextColor="Black"
                         FontSize="Large"
@@ -28,6 +42,7 @@
                         BorderWidth="1" />
 
                 <Button Text="Propofol Rate Calculator"
+                        x:Name="Propofol"
                         Clicked="Propofol_Clicked"
                         TextColor="Black"
                         FontSize="Large"
@@ -36,6 +51,7 @@
                         BorderWidth="1" />
 
                 <Button Text="Temperature Conversion"
+                        x:Name="Temperature"
                         Clicked="Temperature_Clicked"
                         TextColor="Black"
                         FontSize="Large"
@@ -44,13 +60,22 @@
                         BorderWidth="1" />
 
                 <Button Text="Weight Conversion"
+                        x:Name="Weight"
                         Clicked="Weight_Clicked"
                         TextColor="Black"
                         FontSize="Large"
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="Start"
                         BorderWidth="1" />
-                </StackLayout>
+
+                <Button Text="Calculation Log"
+                        Clicked="CalculationLog_Clicked"
+                        TextColor="Black"
+                        FontSize="Large"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"
+                        BorderWidth="1" />
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

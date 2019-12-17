@@ -1,17 +1,28 @@
 ﻿//Code for Temperature Conversion functionality
 using System;
 using System.Collections.Generic;
-
+using Paramedics.Classes;
+using SQLite;
 using Xamarin.Forms;
 
 namespace Paramedics.Calculations {
     public partial class TemperatureConversion : ContentPage {
 
-        double Fahrenheit = 0.0;
-        double Celsius = 0.0;
+        double Fahrenheit;
+        double Celsius;
+        //Patient patient = new Patient();
+        Temperature patient = new Temperature();
 
         public TemperatureConversion() {
             InitializeComponent();
+        }
+
+        /*Displays an alert that lists the instructions on how to use temperature
+         * conversion*/
+        private void InstructionsClicked(object sender, System.EventArgs e) {
+            DisplayAlert("Instructions", "1.Enter the patient's first and last name.\n\n" +
+                                         "2.Enter the patient's temperature in either fahrenheit or celsius then press convert.\n\n" +
+                                         "3. Press clear before converting another patient's temperature.", "Ok");
         }
 
         /*Method that disables the Celsius entry input element when text is changed
@@ -33,13 +44,41 @@ namespace Paramedics.Calculations {
           incorrect value was entered and clears all entered data*/
         private void Convert_Clicked(object sender, System.EventArgs e) {
 
+            if (FirstNameEntry.Text == null || LastNameEntry.Text == null) {
+                DisplayAlert("No name entered", "Please enter the patient's name", "OK");
+            }
+            else
+                patient.SetName(FirstNameEntry.Text, LastNameEntry.Text);
+
             if (Double.TryParse(FTemp.Text, out Fahrenheit)) {
-                Celsius = (((Fahrenheit - 32) * 5) / 9);
-                CTemp.Text = Math.Round(Celsius, 2).ToString();
+
+                patient.SetFahrenheit(Fahrenheit);
+                patient.ConvertToCelsius(Fahrenheit);
+
+                //to insert object into an SQLite table
+                using (SQLiteConnection conn = new SQLiteConnection(App.FilePath)) {
+
+                    conn.CreateTable<Temperature>();
+                    int rowsAdded = conn.Insert(patient);
+                }
+
+                CTemp.Text = patient.Celsius.ToString();
+
             }
             else if (Double.TryParse(CTemp.Text, out Celsius)) {
-                Fahrenheit = (((Celsius * 9) / 5) + 32);
-                FTemp.Text = Math.Round(Fahrenheit, 2).ToString();
+
+                patient.SetCelsius(Celsius);
+                patient.ConvertToFahrenheit(Celsius);
+
+                //to insert object into an SQLite table
+                using (SQLiteConnection conn = new SQLiteConnection(App.FilePath)) {
+
+                    conn.CreateTable<Temperature>();
+                    int rowsAdded = conn.Insert(patient);
+                }
+
+                FTemp.Text = patient.Fahrenheit.ToString();
+
             }
             else {
                 DisplayAlert("No value entered", "Please enter the patient's temperature", "OK");
@@ -50,6 +89,8 @@ namespace Paramedics.Calculations {
         /*Method that clears all data entered and enables the entries for user
           to input values*/
         private void Clear_Clicked(object sender, System.EventArgs e) {
+            FirstNameEntry.Text = null;
+            LastNameEntry.Text = null;
             FTemp.Text = null;
             CTemp.Text = null;
             FTemp.IsEnabled = true;

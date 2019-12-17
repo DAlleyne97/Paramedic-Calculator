@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--An unfisnished Tab page. Intended to allow users to select a tab with the name
+    of the claculation, when selected the page would be automatically modified to
+    show all needed entry boxes and labels needed to perform the claculation. Users
+    could select other tabs on the same page.-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Paramedics.Menus.TabMenu">
+    <ContentPage.Content>
+        <Grid Padding="10">
+
+            <!--Definitions for how many rows and columns the grid will have and
+                how much place each will take up-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Button Text="Weight Conversion"
+                    x:Name="WeightButton"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Clicked="Weight_Clicked"
+                    TextColor="Black"
+                    FontSize="Large"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    BorderWidth="1"/>
+
+            <Button Text="Temperature Conversion"
+                    x:Name="TemperatureButton"
+                    IsVisible="True"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Clicked="Temperature_Clicked"
+                    TextColor="Black"
+                    FontSize="Large"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    BorderWidth="1" />
+
+            <Entry x:Name="WeightLbs"
+                   Placeholder="0"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Numeric"
+                   TextChanged="PoundsChanged"
+                   IsVisible="False"/>
+
+            <Label Text="Lbs"
+                   x:Name="lblabel"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"
+                   IsVisible="False"/>
+
+            <Entry x:Name="WeightKgs"
+                   Placeholder="0"
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Numeric"
+                   TextChanged="KilogramsChanged"
+                   IsVisible="False"/>
+
+            <Label Text="Kgs"
+                   x:Name="kglabel"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"
+                   IsVisible="False"/>
+
+            <Entry x:Name="FTemp"
+                   Placeholder="0"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Numeric"
+                   TextChanged="FahrenheitChanged"
+                   IsVisible="False"/>
+
+            <!--Definition for an label element that shows which unit of
+                measurement the temperature should be entered in.-->
+            <Label Text="&#186;F"
+                   x:Name="flabel"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"
+                   IsVisible="False"/>
+
+            <Entry x:Name="CTemp"
+                   Placeholder="0"
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Numeric"
+                   TextChanged="CelsiusChanged"
+                   IsVisible="False"/>
+
+            <Label Text="&#186;C"
+                   x:Name="clabel"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="Large"
+                   IsVisible="False"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

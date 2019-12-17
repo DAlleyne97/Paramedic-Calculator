@@ -6,7 +6,7 @@
              Title="Dopamine Drip Calculator">
     <ContentPage.Content>
 
-         <!--Definition for a grid layout, a layout which places the elements
+        <!--Definition for a grid layout, a layout which places the elements
             in a table like format-->
         <Grid Padding="10">
 
@@ -22,17 +22,43 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
+
+            <!--A button that displays instructions for weight converison-->
+            <Button Text="Instructions"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    FontSize="Large"
+                    BorderWidth="1"
+                    Clicked="InstructionsClicked"/>
+
+            <!--Entries that allow user to patients name-->
+            <Entry x:Name="FirstNameEntry"
+                   Placeholder="First name"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Plain" />
+
+            <Entry x:Name="LastNameEntry"
+                   Placeholder="Last name"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Plain" />
 
             <!--Label for patients weight-->
             <Label Text="Weight: "
-                   Grid.Row="0"
+                   Grid.Row="2"
                    Grid.Column="0"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
@@ -41,7 +67,7 @@
             <!--Patients weight entry-->
             <Entry x:Name="PatientsWeight"
                    Placeholder="0"
-                   Grid.Row="0"
+                   Grid.Row="2"
                    Grid.Column="1"
                    Keyboard="Numeric"
                    HorizontalTextAlignment="Center" />
@@ -49,14 +75,15 @@
             <!--Label for which unit the weight should be entered in-->
             <Button x:Name="WeightMeasurement"
                     Text="KG"
-                    Grid.Row="0"
+                    Grid.Row="2"
                     Grid.Column="2"
                     FontSize="Large"
+                    BorderWidth="1"
                     Clicked="ChangeMeasurement"/>
 
             <!--Label for dosage-->
             <Label Text="Dosage: "
-                   Grid.Row="1"
+                   Grid.Row="3"
                    Grid.Column="0"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
@@ -65,14 +92,14 @@
             <!-- Dosage Entry -->
             <Entry x:Name="Dosage"
                    Placeholder="0"
-                   Grid.Row="1"
+                   Grid.Row="3"
                    Grid.Column="1"
                    Keyboard="Numeric"
                    HorizontalTextAlignment="Center" />
 
             <!--Label for dosage meausrement-->
             <Label Text="μg/kg/min"
-                   Grid.Row="1"
+                   Grid.Row="3"
                    Grid.Column="2"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
@@ -80,7 +107,7 @@
 
             <!--Label for Dopamine-->
             <Label Text="Dopamine: "
-                   Grid.Row="2"
+                   Grid.Row="4"
                    Grid.Column="0"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
@@ -88,7 +115,7 @@
 
             <!--Dopamine entry-->
             <Entry x:Name="Dopamine"
-                   Grid.Row="2"
+                   Grid.Row="4"
                    Grid.Column="1"
                    Placeholder="0"
                    Keyboard="Numeric"
@@ -97,7 +124,7 @@
 
             <!--Label for dopamine meausrement-->
             <Label Text="Mg"
-                   Grid.Row="2"
+                   Grid.Row="4"
                    Grid.Column="2"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
@@ -105,7 +132,7 @@
 
             <!--Label for Saline-->
             <Label Text="Saline: "
-                   Grid.Row="3"
+                   Grid.Row="5"
                    Grid.Column="0"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
@@ -113,7 +140,7 @@
 
             <!--Saline entry-->
             <Entry x:Name="Saline"
-                   Grid.Row="3"
+                   Grid.Row="5"
                    Grid.Column="1"
                    Placeholder="0"
                    Keyboard="Numeric"
@@ -122,7 +149,7 @@
 
             <!--Saline measurement-->
             <Label Text="Ml"
-                   Grid.Row="3"
+                   Grid.Row="5"
                    Grid.Column="2"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
@@ -130,7 +157,7 @@
 
             <!-- Label for Concentration-->
             <Label Text="Concentration: "
-                   Grid.Row="4"
+                   Grid.Row="6"
                    Grid.Column="0"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
@@ -138,7 +165,7 @@
 
             <!--Concentration entry-->
             <Entry x:Name="Concentration"
-                   Grid.Row="4"
+                   Grid.Row="6"
                    Grid.Column="1"
                    Placeholder="0"
                    Keyboard="Numeric"
@@ -147,7 +174,7 @@
 
             <!--Label for concentration measurement-->
             <Label Text="mg/ml"
-                   Grid.Row="4"
+                   Grid.Row="6"
                    Grid.Column="2"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
@@ -155,7 +182,7 @@
 
             <!-- Label for administration-->
             <Label Text="Administration: "
-                   Grid.Row="5"
+                   Grid.Row="7"
                    Grid.Column="0"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
@@ -165,7 +192,7 @@
                 from a list of items-->
             <Picker x:Name="AdminPicker"
                     Title="Administration"
-                    Grid.Row="5"
+                    Grid.Row="7"
                     Grid.Column="1">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
@@ -179,14 +206,14 @@
 
             <!--Calculate and clear buttons-->
             <Button Text="Calculate"
-                    Grid.Row="6"
+                    Grid.Row="8"
                     Grid.Column="0"
                     Clicked="Calculate_Clicked"
                     FontSize="Large"
                     BorderWidth="1" />
 
             <Button Text="Clear"
-                    Grid.Row="6"
+                    Grid.Row="8"
                     Grid.Column="1"
                     Clicked="Clear_Clicked"
                     FontSize="Large"
@@ -195,13 +222,13 @@
             <!-- Entry for Solution 1-->
             <Entry x:Name="Ml_Min"
                    Text="0"
-                   Grid.Row="7"
+                   Grid.Row="9"
                    Grid.Column="1"
                    HorizontalTextAlignment="Center"
                    IsReadOnly="True" />
 
             <Label Text="Ml/Min"
-                   Grid.Row="7"
+                   Grid.Row="9"
                    Grid.Column="2"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
@@ -209,7 +236,7 @@
 
             <!--Label for drip rate-->
             <Label Text="Drip rate: "
-                   Grid.Row="8"
+                   Grid.Row="10"
                    Grid.Column="0"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
@@ -218,18 +245,17 @@
             <!-- Entry for drip rate solution-->
             <Entry x:Name="DripRate"
                    Text="0"
-                   Grid.Row="8"
+                   Grid.Row="10"
                    Grid.Column="1"
                    HorizontalTextAlignment="Center"
                    IsReadOnly="True" />
             <!--Drip rate measurement-->
             <Label Text="Gtt/Min"
-                   Grid.Row="8"
+                   Grid.Row="10"
                    Grid.Column="2"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
                    FontSize="Large" />
-
         </Grid>
     </ContentPage.Content>
 </ContentPage>
